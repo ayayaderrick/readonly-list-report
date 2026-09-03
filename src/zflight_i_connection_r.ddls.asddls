@@ -11,6 +11,7 @@ define view entity ZFLIGHT_I_CONNECTION_R
       airport_to_id   as AirportToId,
       departure_time  as DepartureTime,
       arrival_time    as ArrivalTime,
+      @Semantics.quantity.unitOfMeasure: 'DistanceUnit'
       distance        as Distance,
       distance_unit   as DistanceUnit
 }
