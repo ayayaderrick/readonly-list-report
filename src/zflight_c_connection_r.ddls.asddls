@@ -2,6 +2,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Connection Consumption View'
 @Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define view entity ZFLIGHT_C_CONNECTION_R
   as select from ZFLIGHT_I_CONNECTION_R
 {
