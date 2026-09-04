@@ -3,7 +3,7 @@
 @EndUserText.label: 'Flight View - CDS Data Model'
 @Metadata.ignorePropagatedAnnotations: true
 define view entity ZFLIGHT_I_FLIGHT_R
-  as select from /dmo/flight
+  as select from /dmo/flight as Flight
 {
   key carrier_id     as CarrierId,
   key connection_id  as ConnectionId,
@@ -11,7 +11,7 @@ define view entity ZFLIGHT_I_FLIGHT_R
       @Semantics.amount.currencyCode: 'CurrencyCode'
       price          as Price,
       currency_code  as CurrencyCode,
-      plane_type_id  as PlaneTypeId,
-      seats_max      as SeatsMax,
-      seats_occupied as SeatsOccupied
+      plane_type_id  as PlaneType,
+      seats_max      as MaximumSeats,
+      seats_occupied as OccupiedSeats
 }

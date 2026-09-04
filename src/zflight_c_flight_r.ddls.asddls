@@ -11,7 +11,8 @@ define view entity ZFLIGHT_C_FLIGHT_R
       @Semantics.amount.currencyCode: 'CurrencyCode'
       Price,
       CurrencyCode,
-      PlaneTypeId,
-      SeatsMax,
-      SeatsOccupied
+      PlaneType,
+      MaximumSeats,
+      OccupiedSeats,
+      OccupiedSeats as OccupiedSeatsForChart
 }
