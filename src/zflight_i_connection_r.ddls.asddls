@@ -5,10 +5,10 @@
 define view entity ZFLIGHT_I_CONNECTION_R
   as select from /dmo/connection
 {
-  key carrier_id      as CarrierId,
+  key carrier_id      as AirlineId,
   key connection_id   as ConnectionId,
-      airport_from_id as AirportFromId,
-      airport_to_id   as AirportToId,
+      airport_from_id as DepartureAirport,
+      airport_to_id   as DestinationAirport,
       departure_time  as DepartureTime,
       arrival_time    as ArrivalTime,
       @Semantics.quantity.unitOfMeasure: 'DistanceUnit'

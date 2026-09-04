@@ -5,7 +5,7 @@
 define view entity ZFLIGHT_I_FLIGHT_R
   as select from /dmo/flight as Flight
 {
-  key carrier_id     as CarrierId,
+  key carrier_id     as AirlineId,
   key connection_id  as ConnectionId,
   key flight_date    as FlightDate,
       @Semantics.amount.currencyCode: 'CurrencyCode'

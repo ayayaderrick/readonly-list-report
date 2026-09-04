@@ -5,7 +5,8 @@
 define view entity ZFLIGHT_C_FLIGHT_R
   as select from ZFLIGHT_I_FLIGHT_R
 {
-  key CarrierId,
+
+  key AirlineId,
   key ConnectionId,
   key FlightDate,
       @Semantics.amount.currencyCode: 'CurrencyCode'

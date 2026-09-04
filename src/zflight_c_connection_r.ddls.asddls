@@ -6,10 +6,10 @@
 define view entity ZFLIGHT_C_CONNECTION_R
   as select from ZFLIGHT_I_CONNECTION_R
 {
-  key CarrierId,
+  key AirlineId,
   key ConnectionId,
-      AirportFromId,
-      AirportToId,
+      DepartureAirport,
+      DestinationAirport,
       DepartureTime,
       ArrivalTime,
       Distance,
