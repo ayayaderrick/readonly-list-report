@@ -6,7 +6,9 @@
 "/DMO/CONNECTION"
 ],
 "ASSOCIATED":
-[],
+[
+"ZFLIGHT_I_FLIGHT_R"
+],
 "BASE":
 [],
 "ANNO_REF":

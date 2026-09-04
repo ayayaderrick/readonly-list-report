@@ -6,7 +6,9 @@
 "ZFLIGHT_I_CONNECTION_R"
 ],
 "ASSOCIATED":
-[],
+[
+"ZFLIGHT_C_FLIGHT_R"
+],
 "BASE":
 [],
 "ANNO_REF":
