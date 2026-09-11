@@ -10,16 +10,28 @@ define view entity ZFLIGHT_C_CONNECTION_R
 {
       @ObjectModel.text.element: [ 'AirlineName' ]
   key AirlineId,
+
   key ConnectionId,
+
       _Airline.Name                                                  as AirlineName,
+
       concat( concat( AirlineId, '-' ), ltrim( ConnectionId, '0' ) ) as ConnectionTitle,
+
+      @ObjectModel.text.element: [ 'DepartureAirportName' ]
       DepartureAirport,
+      _AirportFrom.Name                                              as DepartureAirportName,
+
+      @ObjectModel.text.element: [ 'DestinationAirportName' ]
       DestinationAirport,
+      _AirportTo.Name                                                as DestinationAirportName,
+
       DepartureTime,
       ArrivalTime,
       Distance,
       DistanceUnit,
 
       _Flight,
-      _Airline
+      _Airline,
+      _AirportFrom,
+      _AirportTo
 }
