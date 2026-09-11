@@ -5,15 +5,18 @@
 define view entity ZFLIGHT_C_FLIGHT_R
   as select from ZFLIGHT_I_FLIGHT_R
 {
-
+      @ObjectModel.text.element: [ 'AirlineName' ]
   key AirlineId,
   key ConnectionId,
   key FlightDate,
+      _Airline.Name as AirlineName,
       @Semantics.amount.currencyCode: 'CurrencyCode'
       Price,
       CurrencyCode,
       PlaneType,
       MaximumSeats,
       OccupiedSeats,
-      OccupiedSeats as OccupiedSeatsForChart
+      OccupiedSeats as OccupiedSeatsForChart,
+
+      _Airline
 }

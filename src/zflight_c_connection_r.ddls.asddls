@@ -8,8 +8,10 @@ define view entity ZFLIGHT_C_CONNECTION_R
   association [1..*] to ZFLIGHT_C_FLIGHT_R as _Flight on  $projection.AirlineId    = _Flight.AirlineId
                                                       and $projection.ConnectionId = _Flight.ConnectionId
 {
+      @ObjectModel.text.element: [ 'AirlineName' ]
   key AirlineId,
   key ConnectionId,
+      _Airline.Name                                                  as AirlineName,
       concat( concat( AirlineId, '-' ), ltrim( ConnectionId, '0' ) ) as ConnectionTitle,
       DepartureAirport,
       DestinationAirport,
@@ -18,5 +20,6 @@ define view entity ZFLIGHT_C_CONNECTION_R
       Distance,
       DistanceUnit,
 
-      _Flight
+      _Flight,
+      _Airline
 }
