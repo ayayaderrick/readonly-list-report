@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition for Viewing Flights'
+@ObjectModel.leadingEntity.name: 'Zflight_C_Connection_R'
+define service ZFLIGHT_UI_R {
+  expose ZFLIGHT_C_CONNECTION_R as Connection;
+  expose ZFLIGHT_C_FLIGHT_R     as Flight;
+}
