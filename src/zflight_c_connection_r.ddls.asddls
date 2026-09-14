@@ -8,6 +8,7 @@ define view entity ZFLIGHT_C_CONNECTION_R
   association [1..*] to ZFLIGHT_C_FLIGHT_R as _Flight on  $projection.AirlineId    = _Flight.AirlineId
                                                       and $projection.ConnectionId = _Flight.ConnectionId
 {
+      @Consumption.valueHelpDefinition: [{ entity: {name: '/DMO/I_Carrier_StdVH', element: 'AirlineID' }}]
       @ObjectModel.text.element: [ 'AirlineName' ]
   key AirlineId,
 
@@ -17,10 +18,12 @@ define view entity ZFLIGHT_C_CONNECTION_R
 
       concat( concat( AirlineId, '-' ), ltrim( ConnectionId, '0' ) ) as ConnectionTitle,
 
+      @Consumption.valueHelpDefinition: [{ entity: {name: '/DMO/I_Airport_StdVH', element: 'AirportID' }, useForValidation: true }]
       @ObjectModel.text.element: [ 'DepartureAirportName' ]
       DepartureAirport,
       _AirportFrom.Name                                              as DepartureAirportName,
 
+      @Consumption.valueHelpDefinition: [{ entity: {name: '/DMO/I_Airport_StdVH', element: 'AirportID' }, useForValidation: true }]
       @ObjectModel.text.element: [ 'DestinationAirportName' ]
       DestinationAirport,
       _AirportTo.Name                                                as DestinationAirportName,
